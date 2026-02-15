@@ -1,0 +1,286 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+
+/* Reset some basic elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 13pt;
+    line-height: 1.6;
+    color: #333;
+    background: #f9f9f9;
+    padding: 0;
+}
+
+/* Navigation */
+#nav {
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+#nav a {
+    display: block;
+    padding: 1em 0;
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+#nav a:hover {
+    color: #43B3E0;
+    text-decoration: none;
+}
+
+/* Links */
+a {
+    color: #43B3E0;
+    text-decoration: underline;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #2a7fa5;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50;
+    margin-bottom: 0.75em;
+    line-height: 1.3;
+}
+
+h1 { font-size: 2.5em; font-weight: 700; margin-top: 0.5em; }
+h2 { font-size: 1.8em; font-weight: 600; margin-top: 1.5em; border-bottom: 2px solid #43B3E0; padding-bottom: 0.5em; }
+h3 { font-size: 1.3em; font-weight: 600; margin-top: 1em; }
+h4 { font-size: 1.1em; font-weight: 600; }
+
+/* Paragraphs */
+p {
+    margin-bottom: 1em;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+.container.medium {
+    max-width: 800px;
+}
+
+/* Rows */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    align-items: center;
+}
+
+.row > * {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Columns: optional helper classes */
+.col-1 { flex: 0 0 8.333%; }
+.col-2 { flex: 0 0 16.666%; }
+.col-3 { flex: 0 0 25%; }
+.col-4 { flex: 0 0 33.333%; }
+.col-5-large { flex: 0 0 41.666%; }
+.col-6 { flex: 0 0 50%; }
+.col-7-large { flex: 0 0 58.333%; }
+.col-8 { flex: 0 0 66.666%; }
+.col-12 { flex: 0 0 100%; }
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .col-1, .col-2, .col-3, .col-4, .col-5-large, .col-6, .col-7-large, .col-8, .col-12 {
+        flex: 0 0 100% !important;
+    }
+    
+    .row {
+        gap: 1.5em;
+    }
+    
+    #nav ul {
+        flex-wrap: wrap;
+        gap: 1em;
+        padding: 0.5em 1em;
+    }
+    
+    #nav a {
+        padding: 0.5em 0;
+        font-size: 0.9em;
+    }
+}
+
+/* Lists */
+ul, ol {
+    padding-left: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+li {
+    margin-bottom: 0.7em;
+    line-height: 1.7;
+}
+
+/* Profile photo */
+.image {
+    display: flex;
+    justify-content: center;
+}
+
+.image img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.image img:hover {
+    transform: scale(1.03);
+}
+
+#pic00 {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Mobile adjustment for profile photo */
+@media screen and (max-width: 768px) {
+    .image img,
+    #pic00 {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Wrapper sections */
+.wrapper {
+    padding: 3em 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.wrapper:first-of-type {
+    padding-top: 2em;
+}
+
+.wrapper.style1 {
+    background: #fff;
+}
+
+.wrapper.style2 {
+    background: #f5f5f5;
+}
+
+.wrapper.style3 {
+    background: #fff;
+}
+
+.wrapper.style4 {
+    background: #f5f5f5;
+}
+
+/* Section styling */
+section {
+    margin-bottom: 2.5em;
+}
+
+section h3 {
+    color: #43B3E0;
+    margin-top: 1.5em;
+    font-size: 1.2em;
+}
+
+section p {
+    color: #666;
+    font-size: 0.95em;
+    margin-bottom: 0.8em;
+}
+
+section ul {
+    margin-left: 1em;
+}
+
+section li {
+    color: #555;
+    margin-bottom: 0.6em;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5em;
+}
+
+/* Header styling */
+header {
+    margin-bottom: 1.5em;
+}
+
+header h1 {
+    margin-bottom: 0.3em;
+}
+
+header h2 {
+    margin-top: 0;
+}
+
+/* Optional: blockquote styling */
+blockquote {
+    border-left: 4px solid #eee;
+    padding-left: 1em;
+    color: #666;
+    margin: 1em 0;
+    font-style: italic;
+}
+
+/* Horizontal rule */
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 2em 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 3em;
+    color: #999;
+    padding: 2em 0;
+    border-top: 1px solid #e0e0e0;
+}
